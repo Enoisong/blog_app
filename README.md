@@ -97,7 +97,6 @@ Start the server by running the following command:
 ```sh
 rails server
 ```
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
