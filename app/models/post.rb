@@ -3,8 +3,9 @@ class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
 
-  after_create :post_counter
-  after_destroy :post_counter
+  after_create :update_post_counter
+  after_destroy :update_post_counter
+  after_save :update_post_counter
 
   def recent_comments
     comments.last(5).reverse
@@ -12,7 +13,7 @@ class Post < ApplicationRecord
 
   private
 
-  def post_counter
+  def update_post_counter
     author.update(posts_counter: author.posts.count)
   end
 end
