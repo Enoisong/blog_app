@@ -46,6 +46,7 @@
   - **[Blog post interactions]**
   - **[User authentication]**
   - **[Model Rspec and Validation]**
+  - **[ Controllers ]**
   
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
