@@ -46,7 +46,7 @@
   - **[Blog post interactions]**
   - **[User authentication]**
   - **[Model Rspec and Validation]**
-  - **[Controllers and Routes]**
+  - **[ Controllers ]**
   
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,6 +100,7 @@ Start the server by running the following command:
 rails server
 ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- AUTHORS -->
 ## 👥 Author <a name="author"></a> 
 - Enobong Isong
@@ -109,14 +110,16 @@ rails server
 - Twitter: [@twitterhandle](https://twitter.com/Enobongmisong)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/enobong-isong/)
 
-
 ## 🔭 Future Features <a name="future-features"></a> 
  
 - **[Users Interation]**
 - **[Save blog posts for each user]**
+
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- CONTRIBUTING -->
+
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, as well as feature requests are welcome!
@@ -132,6 +135,7 @@ If you like this project, kindly leave a comment below and share it with
 someone who enjoys coding! or still give me a ⭐️!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- ACKNOWLEDGEMENTS -->
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
  
