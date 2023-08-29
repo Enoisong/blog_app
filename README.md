@@ -114,7 +114,6 @@ rails server
  
 - **[Users Interation]**
 - **[Save blog posts for each user]**
-
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
