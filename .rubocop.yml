@@ -38,6 +38,8 @@ Style/AndOr:
   Enabled: false
 Style/DefWithParentheses:
   Enabled: false
+Layout/EndOfLine:
+  Enabled: false
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
 
