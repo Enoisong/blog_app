@@ -7,7 +7,7 @@ RSpec.describe Post, type: :model do
                         likes_counter: 0)
   end
 
-  context 'Validation measures before saving into the database' do
+  context 'Validation measures before saving into database' do
     before { subject.save }
 
     it 'should have a valid title' do
@@ -15,12 +15,12 @@ RSpec.describe Post, type: :model do
       expect(subject).to_not be_valid
     end
 
-    it 'should have a title with a maximum of 250 characters' do
+    it 'should have a title with maximum 250 characters' do
       subject.title = 'a' * 251
       expect(subject).to_not be_valid
     end
 
-    it 'should allow comments_counter with only an integer value' do
+    it 'should allow comments_counter with only integer value' do
       subject.comments_counter = 'abc'
       expect(subject).to_not be_valid
     end
@@ -30,7 +30,7 @@ RSpec.describe Post, type: :model do
       expect(subject).to_not be_valid
     end
 
-    it 'should allow likes_counter with only an integer value' do
+    it 'should allow likes_counter with only integer value' do
       subject.likes_counter = 'abc'
       expect(subject).to_not be_valid
     end

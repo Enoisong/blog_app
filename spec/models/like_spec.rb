@@ -9,9 +9,9 @@ RSpec.describe Like, type: :model do
     it 'should update the likes_counter of the post' do
       expect(post.likes_counter).to eq 0
       subject.save
-      expect(post.reload.likes_counter).to eq 1
+      expect(post.likes_counter).to eq 1
       subject.destroy
-      expect(post.reload.likes_counter).to eq 0
+      expect(post.likes_counter).to eq 0
     end
   end
 end
