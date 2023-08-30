@@ -30,7 +30,7 @@ RSpec.describe Post, type: :model do
       expect(subject).to_not be_valid
     end
 
-    it 'should allow likes_counter with only interger value' do
+    it 'should allow likes_counter with only integer value' do
       subject.likes_counter = 'abc'
       expect(subject).to_not be_valid
     end

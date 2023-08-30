@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Post', type: :request do
   let(:user) { User.create!(name: 'enoisong', photo: 'person.jpg', bio: 'Software developer') }
-  let(:post) { Post.create!(author: user, title: 'Programming', text: 'Software development is an iterative process') }
+  let(:post) { Post.create!(author: user, title: 'Programming', text: 'Software development is a continuous process') }
 
   context 'GET #index' do
     it 'should renders a successful response' do

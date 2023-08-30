@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   subject { described_class.new(name: 'enoisong', photo: 'person.jpg', bio: 'Software developer', posts_counter: 0) }
 
-  context 'Validation measures before saving into database' do
+  context 'Validation measures before saving into the database' do
     before { subject.save }
 
     it 'should have a valid name' do
@@ -11,7 +11,7 @@ RSpec.describe User, type: :model do
       expect(subject).to_not be_valid
     end
 
-    it 'should allow posts_counter with only integer value' do
+    it 'should allow posts_counter with only an integer value' do
       subject.posts_counter = 'abc'
       expect(subject).to_not be_valid
     end
