@@ -4,7 +4,7 @@ RSpec.describe 'User', type: :request do
   let(:user) { User.create!(name: 'enoisong', photo: 'person.jpg', bio: 'Software developer') }
 
   context 'GET #index' do
-    it 'should renders a successful response' do
+    it 'should render a successful response' do
       get '/users'
       expect(response).to be_successful
     end
@@ -16,12 +16,12 @@ RSpec.describe 'User', type: :request do
 
     it 'should return the correct placeholder text' do
       get users_url
-      expect(response.body).to include('List of all users')
+      expect(response.body).to include('enoisong')
     end
   end
 
   context 'GET #show' do
-    it 'should renders a successful response' do
+    it 'should render a successful response' do
       get "/users/#{user.id}"
       expect(response).to be_successful
     end
@@ -33,7 +33,7 @@ RSpec.describe 'User', type: :request do
 
     it 'should return the correct placeholder text' do
       get user_url(user)
-      expect(response.body).to include('User with the given id')
+      expect(response.body).to include('enoisong')
     end
   end
 end
