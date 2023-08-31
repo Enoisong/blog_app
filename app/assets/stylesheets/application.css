@@ -14,73 +14,72 @@
  *= require_self
  */
 body {
-    background-color: #7a7120;
-  }
-  
-  a {
-    text-decoration: none;
-    color: rgb(13, 14, 13);
-  }
-  
-  a:hover {
-    color: black;
-  }
-  
-  button {
-    background-color: #f1e8e8;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .template {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    padding: 40px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
-  
-  .user-container {
-    display: flex;
-    gap: 40px;
-  }
-  
-  .user-img {
-    width: 0px;
-    height: 0px;
-    border-radius: 0%;
-    object-fit: cover;
-  }
-  
-  .user-div {
-    background-color: rgb(201, 181, 155);
-    width: 400px;
-    padding: 0 15px;
-    border-radius: 5px;
-  }
-  
-  .username {
-    font-weight: bold;
-  }
-  
-  .posts_counter {
-    margin-left: 250px;
-  }
-  
-  .post-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .button-wrapper {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-  }
-  
-  .see-posts-btn {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
+  background-color: #7a7120;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(13, 14, 13);
+}
+
+a:hover {
+  color: black;
+}
+
+button {
+  background-color: #f1e8e8;
+  border: none;
+  cursor: pointer;
+}
+
+.template {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.user-container {
+  display: flex;
+  gap: 40px;
+}
+
+.user-img {
+  width: 0;
+  height: 0;
+  border-radius: 0%;
+  object-fit: cover;
+}
+
+.user-div {
+  background-color: rgb(201, 181, 155);
+  width: 400px;
+  padding: 0 15px;
+  border-radius: 5px;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.posts_counter {
+  margin-left: 250px;
+}
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.button-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.see-posts-btn {
+  font-size: 20px;
+  font-weight: bold;
+}
