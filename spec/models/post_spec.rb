@@ -47,8 +47,9 @@ RSpec.describe Post, type: :model do
         Comment.create(post: subject, author: user, text: "This is my #{i + 1} comment")
       end
       expect(subject.recent_comments.count).to eq 5
-      expect(subject.recent_comments.first.text).to eq 'This is my 4 comment'
-      expect(subject.recent_comments.last.text).to eq 'This is my 8 comment'
+      expect(subject.recent_comments.first.text).to eq 'This is my 8 comment'
+      expect(subject.recent_comments.last.text).to eq 'This is my 4 comment'
+
     end
   end
 
