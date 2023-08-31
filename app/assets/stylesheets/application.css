@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- body {
+body {
     background-color: #7a7120;
   }
   
@@ -53,7 +53,7 @@
   }
   
   .user-div {
-    background-color: antiquewhite;
+    background-color: rgb(201, 181, 155);
     width: 400px;
     padding: 0 15px;
     border-radius: 5px;

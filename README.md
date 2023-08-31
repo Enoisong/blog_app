@@ -47,6 +47,9 @@
   - **[User authentication]**
   - **[Model Rspec and Validation]**
   - **[ Controllers ]**
+  - **[ Controllers Specs ]**
+   - **[ Controllers ]**
+
   
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
