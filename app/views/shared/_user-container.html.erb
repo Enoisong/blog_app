@@ -1,0 +1,7 @@
+<div class='user-container'>
+  <img src="<%= user.photo%>" class='user-img' />
+  <div class='user-div'>
+    <h2><%= link_to user.name, user_url(user) %></h2>
+    <small class='posts_counter'>Number of posts: <%= user.posts_counter %></small>
+  </div>
+</div>

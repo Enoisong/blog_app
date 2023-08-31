@@ -1,1 +1,17 @@
-<h1>List of all posts from the given user id</h1>
+<div class='template'>
+  <%= render partial: 'shared/user-container', locals: { user: @user } %>
+  <% @posts.each do |post| %>
+    <div class='post-container'>
+      <div>
+        <h3><%= link_to post.title, user_post_url(@user, post) %></h3>
+        <p><%= post.text %></p>
+        <small>Comments:<%= post.comments_counter %>, Likes:<%= post.likes_counter %></small>
+      </div>
+      <div class='recent_comments'>
+        <% post.recent_comments.each do |comment| %>
+          <p><%= comment.author.name%>:<%= comment.text%></p>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

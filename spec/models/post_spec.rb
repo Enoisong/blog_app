@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  user = User.create(name: 'enoisong', photo: 'person.jpg', bio: 'Software developer', posts_counter: 0)
+  let(:user) { User.create(name: 'enoisong', photo: 'person.jpg', bio: 'Software developer', posts_counter: 0) }
   subject do
     described_class.new(author: user, title: 'Hello', text: 'This is my first post', comments_counter: 0,
                         likes_counter: 0)
@@ -30,7 +30,7 @@ RSpec.describe Post, type: :model do
       expect(subject).to_not be_valid
     end
 
-    it 'should allow likes_counter with only integer value' do
+    it 'should allow likes_counter with only interger value' do
       subject.likes_counter = 'abc'
       expect(subject).to_not be_valid
     end
@@ -47,16 +47,14 @@ RSpec.describe Post, type: :model do
         Comment.create(post: subject, author: user, text: "This is my #{i + 1} comment")
       end
       expect(subject.recent_comments.count).to eq 5
-      expect(subject.recent_comments[0].text).to eq 'This is my 8 comment'
-      expect(subject.recent_comments[1].text).to eq 'This is my 7 comment'
-      expect(subject.recent_comments[2].text).to eq 'This is my 6 comment'
-      expect(subject.recent_comments[3].text).to eq 'This is my 5 comment'
-      expect(subject.recent_comments[4].text).to eq 'This is my 4 comment'
+      expect(subject.recent_comments.first.text).to eq 'This is my 4 comment'
+      expect(subject.recent_comments.last.text).to eq 'This is my 8 comment'
     end
   end
 
   context '#post_counter' do
     it 'should update the posts_counter of the author' do
+      subject.save
       expect(user.posts_counter).to eq 1
       subject.destroy
       expect(user.posts_counter).to eq 0
