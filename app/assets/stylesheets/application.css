@@ -14,12 +14,12 @@
  *= require_self
  */
  body {
-    background-color: #f1e8e8;
+    background-color: #7a7120;
   }
   
   a {
     text-decoration: none;
-    color: brown;
+    color: rgb(13, 14, 13);
   }
   
   a:hover {
@@ -37,7 +37,7 @@
     flex-direction: column;
     gap: 40px;
     padding: 40px;
-    font-family: Verdana, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
   
   .user-container {
@@ -46,9 +46,9 @@
   }
   
   .user-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    width: 0px;
+    height: 0px;
+    border-radius: 0%;
     object-fit: cover;
   }
   
