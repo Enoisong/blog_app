@@ -16,7 +16,7 @@ RSpec.describe 'User', type: :request do
 
     it 'should return the correct placeholder text' do
       get users_url
-      expect(response.body).to include('List of all users')
+      expect(response.body).to include('enoisong')
     end
   end
 
@@ -33,7 +33,7 @@ RSpec.describe 'User', type: :request do
 
     it 'should return the correct placeholder text' do
       get user_url(user)
-      expect(response.body).to include('User with the given id')
+      expect(response.body).to include('enoisong')
     end
   end
 end

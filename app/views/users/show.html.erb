@@ -1,1 +1,20 @@
-<h1>User with the given id</h1>
+<h1>Selected User Id</h1> 
+<%= render partial: 'shared/user-container', locals: { user: @user } %>
+<div class="detail_container">
+
+<div class="boxed">
+<h1>Bio</h1>
+<p><%= @user.bio %></p>
+</div>
+
+<% @user.recent_posts.each do |post| %>
+    <div class="boxed">       
+      <h1><%= post.title %></h1>
+      <p><%=post.text %></p>
+
+      <p class="comments_likes">Comments:<%= post.comments_counter %>, Likes:<%= post.likes_counter %></p>
+    </div>
+<% end %>
+ 
+<a href="/users/<%= @user.id %>/posts" class="all_post_btn">See all Posts</a>
+ </div>

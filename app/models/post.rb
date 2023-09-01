@@ -11,7 +11,7 @@ class Post < ApplicationRecord
   after_save :update_post_counter
 
   def recent_comments
-    comments.last(5).reverse
+    comments.order(created_at: :desc).limit(5)
   end
 
   private
