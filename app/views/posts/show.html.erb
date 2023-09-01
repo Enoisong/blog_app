@@ -1,10 +1,14 @@
-<div class='template'>
-  <div>
+<div class='posts_show_container'>
+<div class="boxed">
+<div class='posts_info'>  
     <h1><%= @post.title %></h1>
-    <small>Comments:<%= @post.comments_counter %>, Likes:<%= @post.likes_counter %></small>
+    <p>Comments:<%= @post.comments_counter %>, Likes:<%= @post.likes_counter %></p>
+  </div>
+
     <p><%= @post.text %></p>
   </div>
-  <div>
+  <br />
+  <div class='boxed'> 
       <% @post.comments.each do |comment| %>
         <p><%= comment.author.name%>:<%= comment.text%></p>
       <% end %>

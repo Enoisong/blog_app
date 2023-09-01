@@ -1,7 +1,9 @@
 <div class='user-container'>
-  <img src="<%= user.photo%>" class='user-img' />
-  <div class='user-div'>
-    <h2><%= link_to user.name, user_url(user) %></h2>
-    <small class='posts_counter'>Number of posts: <%= user.posts_counter %></small>
+<div class='boxed img_container'>
+  <img src=<%= user.photo %> alt="profile" class="img_container">
+</div>
+  <div class=" boxed user_card" >
+  <a href="/users/<%= user.id %>"> <h2 class="user_label"><%= user.name %></h2></a>  
+    <p class='posts_counter'>Number of posts: <%= user.posts_counter %></small>
   </div>
 </div>
