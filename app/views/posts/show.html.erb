@@ -1,16 +1,18 @@
-<div class='posts_show_container'>
-<div class="boxed">
-<div class='posts_info'>  
-    <h1><%= @post.title %></h1>
-    <p>Comments:<%= @post.comments_counter %>, Likes:<%= @post.likes_counter %></p>
-  </div>
-
-    <p><%= @post.text %></p>
-  </div>
-  <br />
-  <div class='boxed'> 
-      <% @post.comments.each do |comment| %>
-        <p><%= comment.author.name%>:<%= comment.text%></p>
-      <% end %>
-    </div>
+<%= render partial: 'shared/post', locals: { user: @user, post: @post } %>
+<div>
+  <% @post.comments.each do |comment| %>
+    <p><%= comment.author.name %>: <%= comment.text %></p>
+  <% end %>
 </div>
+<%= form_with model: [@user, @post.comments.new], url: user_post_comments_url(@user, @post), local: true do |f| %>
+  <%= f.hidden_field :user_id, value: @current_user.id %>
+  <%= f.text_area :text %>
+  <%= f.submit 'Comment' %>
+<% end %>
+<%= form_with model: [@user, @post.likes.new], url: user_post_likes_url(@user, @post), local: true do |f| %>
+  <%= f.hidden_field :user_id, value: @current_user.id %>
+  <%= f.submit 'Like' %>
+<% end %>
+<button type='button'>
+  <%= link_to 'Go back to profile', user_url(@current_user) %>
+</button>
