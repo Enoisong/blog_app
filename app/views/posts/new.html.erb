@@ -1,0 +1,15 @@
+<h1>Add post </h1>
+<%= form_with model: @post, local: true, data: { turbo: false }, url: user_posts_path do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title, autofocus: true %>
+  </div>
+  <div>
+    <%= f.label :text %>
+    <%= f.text_area :text, size: "70x5" %>
+  </div>
+  <div>
+    <%= f.submit "Submit" %>
+  </div>
+  <%= @post.errors.full_messages.first if @post.errors.any? %>
+<% end %>

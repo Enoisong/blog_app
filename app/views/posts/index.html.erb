@@ -1,22 +1,20 @@
- 
-  <%= render partial: 'shared/user-container', locals: { user: @user } %>
-  <% @posts.each do |post| %>
-    <div class='boxed comments_container'>      
-        <h3><%= link_to post.title, user_post_url(@user, post) %></h3>
-        <p><%= post.text %></p>
-        <p class="comments_likes">
-        <small>Comments:<%= post.comments_counter %>, Likes:<%= post.likes_counter %></small>
-        </p>
-    </div>
-      <div class='boxed'>
-        <% post.recent_comments.each do |comment| %>
-          <p><%= comment.author.name%>:<%= comment.text%></p>
-        <% end %>
-      </div>
-        <br />
-      </div>
-    </div>
-  <% end %>
-  <div class="button_container">
+<%= render partial: 'shared/user-container', locals: { user: @user } %>
+<% @posts.each do |post| %>
+  <div class='boxed comments_container'>
+    <%= render partial: 'shared/post', locals: { user: @user, post: post } %>
+    <p><%= post.text %></p>
+    <p class="comments_likes">
+      <small>Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></small>
+    </p>
+  </div>
+  <div class='boxed'>
+    <% post.recent_comments.each do |comment| %>
+      <p><%= comment.author.name %>: <%= comment.text %></p>
+    <% end %>
+  </div>
+  <br />
+</div>
+<% end %>
+<div class="button_container">
   <button class="all_post_btn">Pagination</button>
 </div>
