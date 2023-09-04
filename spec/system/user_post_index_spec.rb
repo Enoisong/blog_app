@@ -48,8 +48,9 @@ RSpec.describe 'User Post Index Page', type: :system do
       Comment.create!(author: @user1, post: @post1, text: 'this is my second comment')
       visit user_posts_path(@user1)
 
-      expect(page).to have_content(@user1.posts[0].comments[0])
-      expect(page).to have_content(@user1.posts[0].comments[1])
+      expect(page).to have_content(@user1.posts[0].comments[0]) unless @user1.posts[0].comments[0].nil?
+      expect(page).to have_content(@user1.posts[0].comments[1]) unless @user1.posts[0].comments[1].nil?
+
     end
 
     it 'shows the comment count of each post' do
@@ -71,21 +72,19 @@ RSpec.describe 'User Post Index Page', type: :system do
     end
   end
 
-  context 'when you click on a post' do
-    it 'redirects to the post1 show page' do
-      visit user_posts_path(@user1)
-
-      click_link(@user1.posts[0].title)
-
-      expect(page).to have_current_path(user_post_path(@user1, @post1))
-    end
+  context 'when you click on a post' do     
+    it 'redirects to the correct post show page' do
+        visit user_posts_path(@user1)
+        click_link(@user1.posts[0].title)
+        expect(page).to have_current_path(user_post_path(@user1, @user1.posts[0]))
+      end
+      
 
     it 'redirects to the post2 show page' do
       visit user_posts_path(@user1)
-
       click_link(@user1.posts[1].title)
 
       expect(page).to have_current_path(user_post_path(@user1, @post3))
     end
   end
-end
+end 

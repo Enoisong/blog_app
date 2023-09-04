@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'User Show Page', type: :system do
   before do
     driven_by(:rack_test)
-    @user = User.create!(name: 'Enoisong', photo: 'person.jpg', bio: 'Software developer')
+    @user = User.create!(name: 'enoisong', photo: 'person.jpg', bio: 'Software developer')
     @post = Post.create!(author: @user, title: 'First Post', text: 'This is my first post!')
     @post2 = Post.create!(author: @user, title: 'Second Post', text: 'This is my second post!')
     @post3 = Post.create!(author: @user, title: 'Third Post', text: 'This is my third post!')

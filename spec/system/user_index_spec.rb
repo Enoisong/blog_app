@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'User Index Page', type: :system do
   before do
     driven_by(:rack_test)
-    @user1 = User.create!(name: 'Eny', photo: 'person.jpg', bio: 'Software developer')
+    @user1 = User.create!(name: 'eny', photo: 'person.jpg', bio: 'Software developer')
     @user2 = User.create!(name: 'mAli', photo: 'person2.jpg', bio: 'Software developer')
     @post1 = Post.create!(author: @user1, title: 'First Post', text: 'This is my first post!')
     @post2 = Post.create!(author: @user2, title: 'first post', text: 'This is my first post!')
