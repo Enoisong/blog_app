@@ -25,7 +25,6 @@ RSpec.describe 'User Post Show Page', type: :system do
       expect(post1.author.name).to eq(author_name_in_database)
     end
 
-
     it 'shows the text of the post' do
       visit user_post_path(@user1, @post1)
 

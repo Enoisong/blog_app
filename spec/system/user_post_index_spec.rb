@@ -78,7 +78,6 @@ RSpec.describe 'User Post Index Page', type: :system do
       expect(page).to have_current_path(user_post_path(@user1, @user1.posts[0]))
     end
 
-
     it 'redirects to the post2 show page' do
       visit user_posts_path(@user1)
       click_link(@user1.posts[1].title)
