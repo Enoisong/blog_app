@@ -12,18 +12,18 @@ RSpec.describe 'User Post Show Page', type: :system do
       visit user_post_path(@user1, @post1)
 
       expect(page).to have_content(@post1.title)
-    end     
+    end
 
-    it 'shows the author of the post' do       
-        user1 = User.create(name: 'enoisong')  
-        post1 = Post.create(title: 'My Post', author: user1)   
-      
-        visit user_post_path(user1, post1)   
-      
-        author_name_in_database = User.find(post1.author_id).name
-        puts "Author's name in the database: #{author_name_in_database}"
-        expect(post1.author.name).to eq(author_name_in_database)
-      end       
+    it 'shows the author of the post' do
+      user1 = User.create(name: 'enoisong')
+      post1 = Post.create(title: 'My Post', author: user1)
+
+      visit user_post_path(user1, post1)
+
+      author_name_in_database = User.find(post1.author_id).name
+      puts "Author's name in the database: #{author_name_in_database}"
+      expect(post1.author.name).to eq(author_name_in_database)
+    end
 
 
     it 'shows the text of the post' do
@@ -58,4 +58,4 @@ RSpec.describe 'User Post Show Page', type: :system do
       expect(page).to have_content(@post1.comments[0].text)
     end
   end
-end 
+end

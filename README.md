@@ -47,7 +47,10 @@
   - **[User authentication]**
   - **[Model Rspec and Validation]**  
   - **[ Controllers Specs ]**
-   - **[ Views ]**
+  - **[ Views ]**
+  - **[ Fix n+1 Problem]**
+  - **[ Integration Test]**
+   
   
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -107,9 +110,15 @@ rails server
 - Enobong Isong
  
 👤 **Author**
- - GitHub: [@githubhandle](https://github.com/Enoisong)
+- GitHub: [@githubhandle](https://github.com/Enoisong)
 - Twitter: [@twitterhandle](https://twitter.com/Enobongmisong)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/enobong-isong/)
+
+- GitHub: [@MNisarAli](https://github.com/MNisarAli)
+- Gmail: [@dr.nisaralig@gmail.com](mailto:dr.nisaralig@gmail.com)
+- LinkedIn: [@Muhammad Nisar Ali](https://www.linkedin.com/in/muhammad-nisar-ali)
+
+
 
 ## 🔭 Future Features <a name="future-features"></a> 
  
