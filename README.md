@@ -109,10 +109,12 @@ rails server
 ## 👥 Author <a name="author"></a> 
 - Enobong Isong
  
-👤 **Author**
+👤 **Author1**
 - GitHub: [@githubhandle](https://github.com/Enoisong)
 - Twitter: [@twitterhandle](https://twitter.com/Enobongmisong)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/enobong-isong/)
+
+👤 **Author2**
 
 - GitHub: [@MNisarAli](https://github.com/MNisarAli)
 - Gmail: [@dr.nisaralig@gmail.com](mailto:dr.nisaralig@gmail.com)
