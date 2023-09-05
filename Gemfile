@@ -76,6 +76,5 @@ group :test do
   gem 'webdrivers'
 end
 
-gem 'dotenv-rails', groups: %i[development test]
 gem 'devise'
-
+gem 'dotenv-rails', groups: %i[development test]
