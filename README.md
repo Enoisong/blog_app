@@ -121,7 +121,6 @@ rails server
 - LinkedIn: [@Muhammad Nisar Ali](https://www.linkedin.com/in/muhammad-nisar-ali)
 
 
-
 ## 🔭 Future Features <a name="future-features"></a> 
  
 - **[Users Interation]**
