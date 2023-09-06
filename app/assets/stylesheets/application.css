@@ -14,22 +14,39 @@
  *= require_self
  */
 
-body {
-  background-color: #afa96d;
+ body {  
+  background-color: rgb(160, 156, 156);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.user_container {
+.user-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  background-color: rgb(194, 201, 155);
+  background-color: rgb(223, 155, 129);
+  border: 2px solid #556b2f;
+  border-radius: 10px; 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0)
+  ); 
+  background-position: 0 0; 
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+} 
+.user-container:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transform: translate(0, -5px);
 }
 
 .boxed {
   border: solid 1px black;
+}
+
+.boxed .img_container {
+  border: solid 2px black;
 }
 
 .img_container {

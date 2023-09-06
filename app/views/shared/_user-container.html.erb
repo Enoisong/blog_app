@@ -1,9 +1,9 @@
  <div class='user-container'>
   <div class='boxed img_container'>
     <% if user.present? && user.photo.present? %>
-      <img src="<%= user.photo %>" alt="profile" class="img_container">
+      <img src="https://toppng.com/uploads/preview/angry-woman-animated-gif-115497840903vkpeseqr7.png" alt="profile" class="img_container">
     <% else %>
-    <img src="<%= user.photo %>" alt="profile" class="img_container">
+      <img src="https://toppng.com/uploads/preview/angry-woman-animated-gif-115497840903vkpeseqr7.png" alt="profile" class="img_container">
     <% end %>
   </div>
   <div class="boxed user_card">
@@ -13,7 +13,7 @@
       </a>
       <p class='posts_counter'>Number of posts: <%= user.posts_counter %></p>
     <% else %>
-      <!-- Handle the case when user is nil or not found -->
+      <!-- Handle the case when the user is nil or not found -->
       <p class='error_message'>User Not Found</p>
     <% end %>
   </div>
