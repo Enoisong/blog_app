@@ -118,12 +118,7 @@ rails server
 - GitHub: [@Kel-nana](https://github.com/Kel-nana) 
 - Twitter: [@kelvin-irungu](https://twitter.com/home)
 - LinkedIn: [@kelvin-irungu](https://www.linkedin.com/in/kelvin-irungu-838923249/)
-
-👤 **Author3**
-- GitHub: [@MNisarAli](https://github.com/MNisarAli)
-- Gmail: [@dr.nisaralig@gmail.com](mailto:dr.nisaralig@gmail.com)
-- LinkedIn: [@Muhammad Nisar Ali](https://www.linkedin.com/in/muhammad-nisar-ali)
-
+ 
 
 ## 🔭 Future Features <a name="future-features"></a> 
  
