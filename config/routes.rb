@@ -7,5 +7,6 @@ Rails.application.routes.draw do
         resources :likes, only: [:create]
       end
     end
+    # post '/users/:id/posts/create', to: 'posts#create'
   end
   
