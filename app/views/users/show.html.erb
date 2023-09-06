@@ -1,16 +1,43 @@
-<div class='template'>
-  <%= render partial: 'shared/user-container', locals: { user: @user } %>
-  <div><%= @user.bio %></div>
-  <button type='button'>
-    <%= link_to "Create new post", new_user_post_url(@current_user) %>
-  </button>
-  <% @user.recent_posts.each do |post| %>
-    <%= render partial: 'shared/post', locals: { user: @user, post: post } %>
-  <% end %>
-  <div class='button-wrapper'>
-    <button type="button" class='see-posts-btn'>
-      <%= link_to "See all posts", user_posts_url(@user) %>
-    </button>
-  </div>
-</div>
+# <div class='template'>
+#   <%= render partial: 'shared/user-container', locals: { user: @user } %>
+#   <div><%= @user.bio %></div>
+#   <button type='button'>
+#     <%= link_to "Create new post", new_user_post_url(@current_user) %>
+#   </button>
+#   <% @user.recent_posts.each do |post| %>
+#     <%= render partial: 'shared/post', locals: { user: @user, post: post } %>
+#   <% end %>
+#   <div class='button-wrapper'>
+#     <button type="button" class='see-posts-btn'>
+#       <%= link_to "See all posts", user_posts_url(@user) %>
+#     </button>
+#   </div>
+# </div>
  
+<div class='template'>
+  <% if @user.present? %>
+    <%= render partial: 'shared/user-container', locals: { user: @user } %>
+    <% if @user.bio.present? %>
+      <div><%= @user.bio %></div>
+    <% else %>
+      <div>No bio available.</div>
+    <% end %>
+    <button type='button'>
+      <%= link_to "Create new post", new_user_post_url(@current_user) %>
+    </button>
+    <% if @user.recent_posts.present? %>
+      <% @user.recent_posts.each do |post| %>
+        <%= render partial: 'shared/post', locals: { user: @user, post: post } %>
+      <% end %>
+    <% else %>
+      <p>No recent posts available.</p>
+    <% end %>
+    <div class='button-wrapper'>
+      <button type="button" class='see-posts-btn'>
+        <%= link_to "See all posts", user_posts_url(@user) %>
+      </button>
+    </div>
+  <% else %>
+    <p>User not found or signed out.</p>
+  <% end %>
+</div>
