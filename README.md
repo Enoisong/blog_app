@@ -107,14 +107,12 @@ rails server
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
-## 👥 Author <a name="author"></a> 
-- Enobong Isong
+## 👥 Author <a name="author"></a>  
  
 👤 **Author1**
 - GitHub: [@githubhandle](https://github.com/Enoisong)
 - Twitter: [@twitterhandle](https://twitter.com/Enobongmisong)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/enobong-isong/)
-
 
 👤 **Author2**
 - GitHub: [@Kel-nana](https://github.com/Kel-nana) 
