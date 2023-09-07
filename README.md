@@ -50,6 +50,7 @@
   - **[ Views ]**
   - **[ Fix n+1 Problem]**
   - **[ Integration Test]**
+   - **[ Add devise]**
    
   
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -106,8 +107,7 @@ rails server
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
-## 👥 Author <a name="author"></a> 
-- Enobong Isong
+## 👥 Author <a name="author"></a>  
  
 👤 **Author1**
 - GitHub: [@githubhandle](https://github.com/Enoisong)
@@ -115,17 +115,15 @@ rails server
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/enobong-isong/)
 
 👤 **Author2**
-
-- GitHub: [@MNisarAli](https://github.com/MNisarAli)
-- Gmail: [@dr.nisaralig@gmail.com](mailto:dr.nisaralig@gmail.com)
-- LinkedIn: [@Muhammad Nisar Ali](https://www.linkedin.com/in/muhammad-nisar-ali)
-
-
+- GitHub: [@Kel-nana](https://github.com/Kel-nana) 
+- Twitter: [@kelvin-irungu](https://twitter.com/home)
+- LinkedIn: [@kelvin-irungu](https://www.linkedin.com/in/kelvin-irungu-838923249/)
+ 
 
 ## 🔭 Future Features <a name="future-features"></a> 
  
-- **[Users Interation]**
-- **[Save blog posts for each user]**
+- **[More Users Interation]**
+- **[Animation ]**
 
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

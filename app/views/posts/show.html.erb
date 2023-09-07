@@ -1,18 +1,20 @@
-<%= render partial: 'shared/post', locals: { user: @user, post: @post } %>
-<div>
-  <% @post.comments.each do |comment| %>
-    <p><%= comment.author.name %>: <%= comment.text %></p>
+<h1>@<%= @user.name %></h1>
+  <%= render partial: 'shared/post', locals: { user: @user, post: @post } %>
+  <div>
+    <% @post.comments.each do |comment| %>
+      <p><%= comment.author.name%>:<%= comment.text%></p>
+    <% end %>
+  </div>
+  <%= form_with model: [@user, @post.comments.new], url: user_post_comments_url(@user, @post), local: true do |f| %>
+    <%= f.hidden_field :user_id, value: @current_user.id %>
+    <%= f.text_area :text %>
+    <%= f.submit 'Comment' %>
   <% end %>
-</div>
-<%= form_with model: [@user, @post.comments.new], url: user_post_comments_url(@user, @post), local: true do |f| %>
-  <%= f.hidden_field :user_id, value: @current_user.id %>
-  <%= f.text_area :text %>
-  <%= f.submit 'Comment' %>
-<% end %>
-<%= form_with model: [@user, @post.likes.new], url: user_post_likes_url(@user, @post), local: true do |f| %>
-  <%= f.hidden_field :user_id, value: @current_user.id %>
-  <%= f.submit 'Like' %>
-<% end %>
-<button type='button'>
-  <%= link_to 'Go back to profile', user_url(@current_user) %>
-</button>
+  <%= form_with model:[@user, @post.likes.new], url: user_post_likes_url(@user,@post), local: true do |f| %>
+    <%= f.hidden_field :user_id, value: @current_user.id %>
+    <%= f.submit 'Like' %>
+  <% end %>
+  <button type='button'>
+    <%= link_to 'Go back to profile', user_url(@current_user) %>
+  </button>
+</div> 
