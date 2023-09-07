@@ -16,22 +16,23 @@
 
 body {
   background-color: rgb(160, 156, 156);
-  font-family:
-    "Trebuchet MS",
-    "Lucida Sans Unicode",
-    "Lucida Grande",
-    "Lucida Sans",
-    Arial,
-    sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.user-container {
+.user_container {
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
-  /* gap: 1rem;
-  padding: 1rem; */
-  background-color: rgb(223, 155, 129);
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.boxed {
+  border: solid 1px black;
+}
+
+.boxed.user_card {
+  background-color: rgb(212, 167, 150);
   border: 2px solid #556b2f;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -40,26 +41,17 @@ body {
       rgba(255, 255, 255, 0.2),
       rgba(255, 255, 255, 0)
     );
-  /* background-position: 0 0; */
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.user-container:hover {
+.boxed.user_card:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
   transform: translate(0, -5px);
-}
-
-.boxed {
-  border: solid 1px black;
 }
 
 .img_container {
   height: 100px;
   width: 100px;
-}
-
-.boxed .img_container {
-  border: solid 2px black;
 }
 
 .user_card {

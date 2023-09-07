@@ -78,3 +78,5 @@ end
 
 gem 'devise', '~> 4.9'
 gem 'dotenv-rails', groups: %i[development test]
+
+gem 'letter_opener'
