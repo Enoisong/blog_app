@@ -27,10 +27,10 @@ body {
 
 .user-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
+  /* justify-content: center;
+  align-items: center; */
+  /* gap: 1rem;
+  padding: 1rem; */
   background-color: rgb(223, 155, 129);
   border: 2px solid #556b2f;
   border-radius: 10px;
@@ -40,7 +40,7 @@ body {
       rgba(255, 255, 255, 0.2),
       rgba(255, 255, 255, 0)
     );
-  background-position: 0 0;
+  /* background-position: 0 0; */
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
